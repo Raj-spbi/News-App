@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/first"
+        android:layout_height="wrap_content"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="@color/white"
+            app:titleTextColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+<ScrollView
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:textColor="@color/textcolor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="About Tht Platform"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+
+                    android:paddingRight="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textColor="@color/textcolor"
+                    android:fontFamily="@font/alike"
+                    android:alpha=".9"
+
+                    android:text="Rabhyaa Foundation has started LawTrend.in on values enshrined in the Preamble of the Constitution of India. The object of this platform is to create informed citizens with recent legal updates, Judgments, Legislations of Parliament and State Legislatures and views of experts in the field of law, in plain and pointed language, for intellectual development of citizens.
+Our tag line “The Line of Law” guides that this platform shall be a pathway for creating legal awareness in the society and this platform shall only contain content related to legal field.
+Our endeavour is to provide unbiased , trustworthy and latest content of legal development on our platform and in this journey you can contribute by working on assignments related to legal field, learn drafting and become court room journalist of your city./"/>
+                <TextView
+                    android:textColor="@color/textcolor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="About the Internship"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textColor="@color/textcolor"
+                    android:fontFamily="@font/alike"
+                    android:alpha=".9"
+                    android:text="LawTrend Online Certificate internship programme is first of its kind in India, offering students from all over India to contribute in raising legal quotient of society. Our online Internship program is a challenging and interesting experience for those who want to learn and contribute something from home. We offer an exciting opportunity to legal journalism, learn drafting, judgment synopsis writing, legal research, writing articles and publications for the website etc. During the Internship Webinars will be conducted in which Judges, Leading Lawyers and Social Activists will be called. After successfully completing the internship, a certificate will be given to the intern."/>
+                <TextView
+                    android:textColor="@color/textcolor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Eligibility"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/textcolor"
+                    android:fontFamily="@font/alike"
+                    android:alpha=".9"
+                    android:text="LawTrend welcomes and encourages internship applications from students in law schools and Institutes of Social Work."/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/textcolor"
+                    android:fontFamily="@font/alike"
+                    android:alpha=".9"
+                    android:text="Priority consideration will be given to applicants who have experience in blog writing and legal research."/>
+                <TextView
+                    android:textColor="@color/textcolor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Duration"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>  <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/textcolor"
+                android:fontFamily="@font/alike"
+                android:alpha=".9"
+                android:text="A minimum commitment of one month will be required from interns. Interns are expected to show professionalism while performing their tasks and produce a report at the end of their assignment."/>
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="34dp"
+                    android:layout_below="@id/cover"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:id="@+id/applybtn"
+                    android:layout_marginTop="20dp"
+                    android:text="Apply Here"
+                    android:textSize="12sp"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/abhaya_libre_medium"
+                    android:textColor="@color/white"
+                    android:background="@drawable/background"
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+</ScrollView>
+
+
+</LinearLayout>

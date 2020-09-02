@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/bookmark"
+        android:orderInCategory="100"
+        android:icon="@drawable/bookmrk"
+        app:showAsAction="always"
+        android:title="Bookmark" />
+    <item
+        android:id="@+id/search"
+        android:orderInCategory="101"
+        android:title="Search"
+        android:icon="@drawable/search"
+        app:showAsAction="always" />
+    <item
+    android:id="@+id/notification"
+    android:orderInCategory="102"
+    android:title="Notification"
+     />
+
+</menu>

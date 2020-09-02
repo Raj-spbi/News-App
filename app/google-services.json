@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1075535322711",
+    "firebase_url": "https://law-trend-2b0e7.firebaseio.com",
+    "project_id": "law-trend-2b0e7",
+    "storage_bucket": "law-trend-2b0e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1075535322711:android:61bee4e6067b9b6604cd12",
+        "android_client_info": {
+          "package_name": "com.aaratechnologies.lawtrend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1075535322711-92ck6mpgdabgq768vglq4ae925uo0888.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAosyqIdozPMiUOAL93NkI5OoWZHhIcoxk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1075535322711-92ck6mpgdabgq768vglq4ae925uo0888.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

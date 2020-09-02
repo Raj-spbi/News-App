@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.AboutUsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:elevation="2dp"
+           android:padding="5dp"
+           android:translationZ="1dp"
+           android:background="@color/white"
+           android:id="@+id/first"
+           android:orientation="horizontal">
+
+           <TextView
+               android:fontFamily="@font/poppins"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="   About Law Trend"
+               android:textAppearance="@style/TextAppearance.AppCompat.Large"
+               android:layout_gravity="center"/>
+       </LinearLayout>
+       <ScrollView
+           android:id="@+id/second"
+           android:layout_below="@id/first"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           >
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical">
+
+               <androidx.cardview.widget.CardView
+                   android:layout_width="match_parent"
+                   app:cardElevation="6dp"
+                   android:layout_marginTop="10dp"
+                   android:layout_height="wrap_content"
+                   >
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:orientation="vertical">
+                       <TextView
+                           android:textSize="12sp"
+                           android:fontFamily="@font/poppins"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:text="Rabhyaa Foundation, a registered sole Proprietorship Firm, has started this platform on values enshrined in the Preamble of the Constitution of India. The object of this platform is to create informed citizens with recent legal updates, Judgments, Legislations of Parliament and State Legislatures, and views of experts in the field of law, in plain and pointed language, for the intellectual development of citizens.
+
+Our tag line “The Line of Law” guides that this platform shall be a pathway for creating legal awareness in the society and this platform shall only contain content related to the legal field.
+
+Our endeavor is to provide unbiased, trustworthy, and latest content of legal development on our platform, and in this journey, anyone can contribute by providing content such as articles, reviews, judgments, etc. on the dedicated page of the website."
+                           android:padding="10dp"/>
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+
+               <androidx.cardview.widget.CardView
+                   app:cardElevation="6dp"
+                   android:layout_marginTop="8dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   >
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:orientation="vertical">
+                       <TextView
+                           android:padding="10dp"
+                           android:textSize="16dp"
+                           android:fontFamily="@font/poppins"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:paddingLeft="10dp"
+                           android:paddingRight="10dp"
+                           android:textStyle="bold"
+                           android:layout_gravity="center"
+                           android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                           android:text="I THINK THE FIRST DUTY OF SOCIETY IS JUSTICE.- ALEXANDER HAMILTON “"/>
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+          <androidx.cardview.widget.CardView
+              android:layout_marginTop="8dp"
+              android:layout_width="match_parent"
+              app:cardElevation="6dp"
+              android:layout_height="wrap_content">
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+                  <TextView
+                      android:layout_marginTop="8dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Editor-in-Chief"
+                      android:layout_gravity="center"
+                      android:gravity="center"
+                      android:paddingTop="8dp"
+                      android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                      android:fontFamily="@font/poppins"/>
+                  <ImageView
+                      android:layout_marginTop="10dp"
+                      android:padding="5dp"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:src="@drawable/rajat"
+                      android:layout_gravity="center"
+                      android:paddingTop="10dp"/>
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:gravity="center"
+                      android:text="Rajat Rajan Singh"
+                      android:fontFamily="@font/poppins"
+                      android:textSize="12sp"/>
+                  <TextView
+                      android:textSize="12sp"
+                      android:fontFamily="@font/poppins"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="our Editor-in-Chief is LL.B (Hons.) and LL.M from the University of Lucknow and Completed Course on Citizenship and Rule of Law from the University of London, London (U.K.). He is practicing Law at the Allahabad High Court, Lucknow in the field of Civil Law with special focus on Service, Education, Regulatory Compliance, Real Estate, Corporate, Motor Vehicle Claim, matters."
+                      android:padding="10dp"/>
+              </LinearLayout>
+          </androidx.cardview.widget.CardView>
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    app:cardElevation="6dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/regulact"/>
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Preamble Constitution of India"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+           </LinearLayout>
+       </ScrollView>
+   </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

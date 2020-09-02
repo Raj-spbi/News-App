@@ -1,0 +1,32 @@
+<com.skydoves.elasticviews.ElasticCardView
+    android:id="@+id/allmenus"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardView_duration="300"
+    app:cardView_scale="0.8"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/cover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--                        <ImageView-->
+        <!--                            android:layout_width="24dp"-->
+        <!--                            android:layout_height="24dp"-->
+        <!--                            android:layout_margin="8dp"-->
+        <!--                            android:src="@drawable/add" />-->
+
+        <TextView
+            android:id="@+id/menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:fontFamily="@font/poppins"
+            android:text="Home"
+            android:textColor="@color/textcolor"
+            android:textSize="16dp" />
+    </LinearLayout>
+</com.skydoves.elasticviews.ElasticCardView>
