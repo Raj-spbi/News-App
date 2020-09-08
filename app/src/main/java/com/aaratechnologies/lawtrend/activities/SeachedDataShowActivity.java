@@ -19,11 +19,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.aaratechnologies.lawtrend.BuildConfig;
 import com.aaratechnologies.lawtrend.R;
 import com.aaratechnologies.lawtrend.managers.VolleySingleton;
+import com.aaratechnologies.lawtrend.managers.WebURLS;
 import com.aaratechnologies.lawtrend.menuwiseactivities.DatabaseManager;
+import com.aaratechnologies.lawtrend.menuwiseactivities.SearchNewsActivity;
 import com.aaratechnologies.lawtrend.models.ModelShowSearchData;
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -75,7 +75,7 @@ public class SeachedDataShowActivity extends AppCompatActivity {
         url=intent.getStringExtra("url");
 
 
-        StringRequest stringRequest=new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+        StringRequest stringRequest=new StringRequest(Request.Method.GET, WebURLS.Show_ParticularNews+url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {
@@ -147,14 +147,22 @@ public class SeachedDataShowActivity extends AppCompatActivity {
                    String TABLE_NAME = "Bookmark";
                    Cursor cursor;
                    SQLiteDatabase db = openOrCreateDatabase(DATABASE_NAME,android.content.Context.MODE_PRIVATE ,null);
-                   String query="Select * From "+TABLE_NAME+" Where post_id="+modelData.get(position).getId();
-                   cursor=db.rawQuery(query,null);
-                   if (cursor.getCount()>0){
-                       Toast.makeText(context, "Already Bookmarked", Toast.LENGTH_SHORT).show();
-                   } else if(databaseManager.addData(modelData.get(position).getId(),modelData.get(position).getTitle(),modelData.get(position).getContent(),modelData.get(position).getImageres(),modelData.get(position).getTime())){
-                       Toast.makeText(context, "Bookmarked Successfully", Toast.LENGTH_SHORT).show();
-                   }else {
-                       Toast.makeText(context, "Please try later", Toast.LENGTH_SHORT).show();
+                   try {
+                       String query="Select * From "+TABLE_NAME+" Where post_id="+modelData.get(position).getId();
+                       cursor=db.rawQuery(query,null);
+                       if (cursor.getCount()>0){
+                           Toast.makeText(context, "Already Bookmarked", Toast.LENGTH_SHORT).show();
+                       } else if(databaseManager.addData(modelData.get(position).getId(),modelData.get(position).getTitle(),modelData.get(position).getContent(),modelData.get(position).getImageres(),modelData.get(position).getTime())){
+                           Toast.makeText(context, "Bookmarked Successfully", Toast.LENGTH_SHORT).show();
+                       }else {
+                           Toast.makeText(context, "Please try later", Toast.LENGTH_SHORT).show();
+                       }
+                   } catch (Exception e) {
+//                            Toast.makeText(context, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
+                       e.printStackTrace();
+                       if(databaseManager.addData(modelData.get(position).getId(),modelData.get(position).getTitle(),modelData.get(position).getContent(),modelData.get(position).getImageres(),modelData.get(position).getTime())){
+                           Toast.makeText(context, "Bookmarked Successfully", Toast.LENGTH_SHORT).show();
+                       }
                    }
                }
            });
@@ -163,7 +171,7 @@ public class SeachedDataShowActivity extends AppCompatActivity {
                public void onClick(View view) {
                    Intent sendIntent = new Intent(Intent.ACTION_SEND);
                    sendIntent.setType("text/plain");
-                   sendIntent.putExtra(Intent.EXTRA_TEXT,modelData.get(position).getId()+"  \nDownload Law Trend for more update \n "+"https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID);
+                   sendIntent.putExtra(Intent.EXTRA_TEXT,modelData.get(position).getId()+"  \nDownload Law Trend for more update \n "+"https://play.google.com/store/apps/details?id=" + context.getPackageName());
                    startActivity(sendIntent);
                }
            });
@@ -192,4 +200,11 @@ public class SeachedDataShowActivity extends AppCompatActivity {
             }
         }
    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent=new Intent(getApplicationContext(), SearchNewsActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

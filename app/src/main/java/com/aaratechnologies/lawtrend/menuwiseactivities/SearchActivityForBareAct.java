@@ -5,6 +5,7 @@ import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -105,7 +106,6 @@ public class SearchActivityForBareAct extends AppCompatActivity {
             public boolean onQueryTextSubmit(String query) {
                 return false;
             }
-
             @Override
             public boolean onQueryTextChange(String newText) {
                 adapter.getFilter().filter(newText);
@@ -115,6 +115,10 @@ public class SearchActivityForBareAct extends AppCompatActivity {
         return true;
     }
 
-
-
+    @Override
+    public void onBackPressed() {
+        Intent intent=new Intent(getApplicationContext(),BareAndActsActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

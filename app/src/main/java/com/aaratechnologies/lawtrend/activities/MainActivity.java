@@ -32,16 +32,13 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
-import com.aaratechnologies.lawtrend.AppUpdateChecker;
 import com.aaratechnologies.lawtrend.R;
 import com.aaratechnologies.lawtrend.fragments.ColumnsFragment;
 import com.aaratechnologies.lawtrend.fragments.CourtUpdatesFragment;
 import com.aaratechnologies.lawtrend.fragments.JudgementsFragment;
 import com.aaratechnologies.lawtrend.fragments.OnlineInternshipFragment;
-import com.aaratechnologies.lawtrend.fragments.SearchFragment;
 import com.aaratechnologies.lawtrend.fragments.TrendingStoriesFragment;
 import com.aaratechnologies.lawtrend.fragments.UserPanelFragment;
 import com.aaratechnologies.lawtrend.managers.VolleySingleton;
@@ -52,6 +49,7 @@ import com.aaratechnologies.lawtrend.menuwiseactivities.BookmarkActivity;
 import com.aaratechnologies.lawtrend.menuwiseactivities.ContactUsActivity;
 import com.aaratechnologies.lawtrend.menuwiseactivities.MasterActivity;
 import com.aaratechnologies.lawtrend.menuwiseactivities.OnlineInternshipActivity;
+import com.aaratechnologies.lawtrend.menuwiseactivities.SearchNewsActivity;
 import com.aaratechnologies.lawtrend.models.ModelMenus;
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -116,8 +114,8 @@ public class MainActivity extends AppCompatActivity {
             alertDialog.show();
         } else {
 
-            AppUpdateChecker appUpdateChecker=new AppUpdateChecker(this);  //pass the activity in constructure
-            appUpdateChecker.checkForUpdate(false); //mannual check false here
+//            AppUpdateChecker appUpdateChecker=new AppUpdateChecker(this);  //pass the activity in constructure
+//            appUpdateChecker.checkForUpdate(false); //mannual check false here
 
             FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener( MainActivity.this,  new OnSuccessListener<InstanceIdResult>() {
                 @Override
@@ -293,12 +291,15 @@ public class MainActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.search:
-                tabLayout.setVisibility(View.GONE);
-                viewPager.setVisibility(View.GONE);
-               FragmentManager fragmentManagersearch=getSupportFragmentManager();
-                FragmentTransaction fragmentTransactionsearch=fragmentManagersearch.beginTransaction();
-                fragmentTransactionsearch.replace(R.id.container,new SearchFragment());
-                fragmentTransactionsearch.commit();
+                Intent intent1=new Intent(getApplicationContext(), SearchNewsActivity.class);
+                startActivity(intent1);
+                finish();
+//                tabLayout.setVisibility(View.GONE);
+//                viewPager.setVisibility(View.GONE);
+//               FragmentManager fragmentManagersearch=getSupportFragmentManager();
+//                FragmentTransaction fragmentTransactionsearch=fragmentManagersearch.beginTransaction();
+//                fragmentTransactionsearch.replace(R.id.container,new SearchFragment());
+//                fragmentTransactionsearch.commit();
 
                 break;
             case R.id.notification:
